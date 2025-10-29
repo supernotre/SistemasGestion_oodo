@@ -1,4 +1,4 @@
-Repositorio en GitHub
+1. Repositorio en GitHub
 Se creó un repositorio en GitHub con la siguiente estructura de carpetas:
 
 extra-addons/
