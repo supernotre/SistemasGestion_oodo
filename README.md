@@ -52,29 +52,29 @@ Confirmando que ya está la base de datos enlazada correctamente con el fichero.
 6. Creación de la base de datos:
    En el Dashboard de Render, New + → PostgreSQL (o Databases → New Database → PostgreSQL).
 
-Completa:
-    Name: sistemasgestion_db
-    Region: misma región que tu servicio (importante para baja latencia)
-    Plan: Free (dev) o paid (producción)
+    Completa:
+        Name: sistemasgestion_db
+        Region: misma región que tu servicio (importante para baja latencia)
+        Plan: Free (dev) o paid (producción)
     
-Haz clic en Create Database.
-    Cuando esté creada, entra en el servicio de DB y copia las credenciales. Verás algo así:
+    Haz clic en Create Database.
+        Cuando esté creada, entra en el servicio de DB y copia las credenciales. Verás algo así:
 
-DATABASE (internal): postgresql://user:password@internal-host:5432/dbname
-DATABASE (external): postgresql://user:password@external-host:5432/dbname
+    DATABASE (internal): postgresql://user:password@internal-host:5432/dbname
+    DATABASE (external): postgresql://user:password@external-host:5432/dbname
 
-Configurar variables de entorno en tu servicio de Render
-    En el servicio SistemasGestion_oodo:
-    Ve a Environment → Environment Variables.
-    Añade las variables necesarias para que Odoo se conecte a Postgres. Dependiendo de cómo arranques Odoo, puedes usar DATABASE_URL o variables separadas. Aquí dos opciones — usa la que encaje con tu imagen/arranque:
+    Configurar variables de entorno en tu servicio de Render
+        En el servicio SistemasGestion_oodo:
+        Ve a Environment → Environment Variables.
+        Añade las variables necesarias para que Odoo se conecte a Postgres. Dependiendo de cómo arranques Odoo, puedes usar DATABASE_URL o variables separadas. Aquí dos opciones — usa la que encaje con tu imagen/arranque:
 
-DB_HOST=<host>
-DB_PORT=5432
-DB_USER=<user>
-DB_PASS=<password>
-DB_NAME=<dbname>
+    DB_HOST=<host>
+    DB_PORT=5432
+    DB_USER=<user>
+    DB_PASS=<password>
+    DB_NAME=<dbname>
 
-ODOO_ADMIN_PASSWORD=admin_password_que_elijas
+    ODOO_ADMIN_PASSWORD=admin_password_que_elijas
 
 
 
