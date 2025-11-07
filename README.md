@@ -68,13 +68,23 @@ Confirmando que ya está la base de datos enlazada correctamente con el fichero.
         Ve a Environment → Environment Variables.
         Añade las variables necesarias para que Odoo se conecte a Postgres. Dependiendo de cómo arranques Odoo, puedes usar DATABASE_URL o variables separadas. Aquí dos opciones — usa la que encaje con tu imagen/arranque:
 
-    DB_HOST=<host>
-    DB_PORT=5432
-    DB_USER=<user>
-    DB_PASS=<password>
-    DB_NAME=<dbname>
+        DB_HOST=<host>
+        DB_PORT=5432
+        DB_USER=<user>
+        DB_PASS=<password>
+        DB_NAME=<dbname>
 
-    ODOO_ADMIN_PASSWORD=admin_password_que_elijas
+
+    Cuando el servicio Odoo se reinicie:
+
+    Si todo está configurado correctamente, en los logs (pestaña “Logs”) verás los mensajes: ==> Checking/initializing DB <nombre_de_tu_bd> ==> Starting Odoo server
+
+   Consejos:
+   
+    Asegúrate de que tanto Odoo como Postgres estén en la misma región dentro de Render para evitar problemas de conexión o latencia.
+
+    Si hay algún error (por ejemplo, credenciales incorrectas o base de datos inaccesible), Render mostrará mensajes indicando el problema.
+        
 
 
 
